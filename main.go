@@ -37,6 +37,7 @@ func main() {
 	hostFlag := flag.String("host", "localhost", "host to listen to")
 	protocolFlag := flag.String("protocol", "tcp", "protocol to use (kcp/tcp)")
 	peersFlag := flag.String("peers", "", "peers to connect to")
+	natFlag := flag.Bool("nat", false, "enable NAT")
 	flag.Parse()
 
 	port := uint16(*portFlag)
@@ -57,7 +58,9 @@ func main() {
 	builder.AddPlugin(new(discovery.Plugin))
 
 	// Register NAT plugin.
-	nat.RegisterPlugin(builder)
+	if *natFlag {
+		nat.RegisterPlugin(builder)
+	}
 
 	// Add custom chat plugin.
 	builder.AddPlugin(new(ClipboardPlugin))
