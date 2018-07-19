@@ -13,3 +13,4 @@ import:
   - crypto/ed25519
   - network
   - network/discovery
+  - network/nat

@@ -9,6 +9,7 @@ import (
 	"github.com/perlin-network/noise/crypto/ed25519"
 	"github.com/perlin-network/noise/network"
 	"github.com/perlin-network/noise/network/discovery"
+	"github.com/perlin-network/noise/network/nat"
 	"github.com/shivylp/clipboard"
 	"github.com/tuxcanfly/peerklip/messages"
 )
@@ -54,6 +55,9 @@ func main() {
 
 	// Register peer discovery plugin.
 	builder.AddPlugin(new(discovery.Plugin))
+
+	// Register NAT plugin.
+	nat.RegisterPlugin(builder)
 
 	// Add custom chat plugin.
 	builder.AddPlugin(new(ClipboardPlugin))

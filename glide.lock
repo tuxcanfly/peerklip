@@ -1,6 +1,8 @@
-hash: 0c6328a97aadb9b55fb63a25b64c1ebb580134fdad6cb0af8153a48257e45868
-updated: 2018-07-19T19:04:49.874793964+05:30
+hash: e7116cf2b9bf1d23b4f8d7f57631bc4a09dc4e12464268e9072d79d29035c97f
+updated: 2018-07-19T19:54:25.796871869+05:30
 imports:
+- name: github.com/fd/go-nat
+  version: bad65a492f32121a87197f4a085905c35e2a367e
 - name: github.com/gogo/protobuf
   version: 636bf0302bc95575d69441b25a2603156ffdddf1
   subpackages:
@@ -12,6 +14,19 @@ imports:
   - types
 - name: github.com/golang/glog
   version: 23def4e6c14b4da8ac2ed8007337bc5eb5007998
+- name: github.com/huin/goupnp
+  version: 1395d1447324cbea88d249fbfcfd70ea878fdfca
+  subpackages:
+  - dcps/internetgateway1
+  - dcps/internetgateway2
+  - httpu
+  - scpd
+  - soap
+  - ssdp
+- name: github.com/jackpal/gateway
+  version: cbcf4e3f3baee7952fc386c8b2534af4d267c875
+- name: github.com/jackpal/go-nat-pmp
+  version: 28a68d0c24adce1da43f8df6a57340909ecd7fdd
 - name: github.com/klauspost/cpuid
   version: e7e905edc00ea8827e58662220139109efea09db
 - name: github.com/klauspost/reedsolomon
@@ -28,6 +43,7 @@ imports:
   - dht
   - network
   - network/discovery
+  - network/nat
   - network/rpc
   - peer
   - protobuf
@@ -64,7 +80,30 @@ imports:
   version: 81d44fd177a98d09fe3bc40a5a78d495d3f042ea
   subpackages:
   - bpf
+  - html
+  - html/atom
+  - html/charset
   - internal/iana
   - internal/socket
   - ipv4
+- name: golang.org/x/text
+  version: 0605a8320aceb4207a5fb3521281e17ec2075476
+  subpackages:
+  - encoding
+  - encoding/charmap
+  - encoding/htmlindex
+  - encoding/internal
+  - encoding/internal/identifier
+  - encoding/japanese
+  - encoding/korean
+  - encoding/simplifiedchinese
+  - encoding/traditionalchinese
+  - encoding/unicode
+  - internal/language
+  - internal/language/compact
+  - internal/tag
+  - internal/utf8internal
+  - language
+  - runes
+  - transform
 testImports: []
