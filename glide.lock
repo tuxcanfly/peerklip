@@ -1,0 +1,70 @@
+hash: 0c6328a97aadb9b55fb63a25b64c1ebb580134fdad6cb0af8153a48257e45868
+updated: 2018-07-19T19:04:49.874793964+05:30
+imports:
+- name: github.com/gogo/protobuf
+  version: 636bf0302bc95575d69441b25a2603156ffdddf1
+  subpackages:
+  - gogoproto
+  - jsonpb
+  - proto
+  - protoc-gen-gogo/descriptor
+  - sortkeys
+  - types
+- name: github.com/golang/glog
+  version: 23def4e6c14b4da8ac2ed8007337bc5eb5007998
+- name: github.com/klauspost/cpuid
+  version: e7e905edc00ea8827e58662220139109efea09db
+- name: github.com/klauspost/reedsolomon
+  version: 925cb01d65108f2c935e02fdb79ff4a055a4a20d
+- name: github.com/minio/blake2b-simd
+  version: 3f5f724cb5b182a5c278d6d3d55b40e7f8c2efb4
+- name: github.com/perlin-network/noise
+  version: f781d22b417070a0cc8f129cb17263dd4210bfa9
+  subpackages:
+  - crypto
+  - crypto/blake2b
+  - crypto/ed25519
+  - crypto/ed25519/internal/edwards25519
+  - dht
+  - network
+  - network/discovery
+  - network/rpc
+  - peer
+  - protobuf
+  - types/lru
+- name: github.com/pkg/errors
+  version: 816c9085562cd7ee03e7f8188a1cfd942858cded
+- name: github.com/shivylp/clipboard
+  version: be3b6bdc0e1508e1df593521ad4c67baa9714ab7
+- name: github.com/templexxx/cpufeat
+  version: e85c4911a73366373aa883cd34de4063e9e9630a
+- name: github.com/templexxx/xor
+  version: 0af8e873c554da75f37f2049cdffda804533d44c
+- name: github.com/tjfoc/gmsm
+  version: 31bd720984f8ed12526f8667a2b4432f3132da0f
+  subpackages:
+  - sm4
+- name: github.com/xtaci/kcp-go
+  version: 42bc1dfefff592fdb3affa793980c4f6ab4213e5
+- name: github.com/xtaci/smux
+  version: e28719eede1ac5714cf0b06ba2f403125864ebe0
+- name: golang.org/x/crypto
+  version: a2144134853fc9a27a7b1e3eb4f19f1a76df13c9
+  subpackages:
+  - blowfish
+  - cast5
+  - internal/subtle
+  - pbkdf2
+  - salsa20
+  - salsa20/salsa
+  - tea
+  - twofish
+  - xtea
+- name: golang.org/x/net
+  version: 81d44fd177a98d09fe3bc40a5a78d495d3f042ea
+  subpackages:
+  - bpf
+  - internal/iana
+  - internal/socket
+  - ipv4
+testImports: []
