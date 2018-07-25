@@ -1,0 +1,10 @@
+[Unit]
+Description=peerklip p2p clipboard sync
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/peerklip
+
+[Install]
+WantedBy=default.target
