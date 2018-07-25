@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"net"
 	"strings"
 	"time"
 
@@ -45,6 +46,34 @@ func main() {
 	protocol := *protocolFlag
 	peers := strings.Split(*peersFlag, ",")
 
+	// default host to local ip
+	if host == "localhost" {
+		ifaces, err := net.Interfaces()
+		if err != nil {
+			glog.Fatal(err)
+			return
+		}
+		for _, i := range ifaces {
+			addrs, err := i.Addrs()
+			if err != nil {
+				glog.Fatal(err)
+				return
+			}
+			if i.Flags&net.FlagUp == net.FlagUp {
+				for _, addr := range addrs {
+					switch v := addr.(type) {
+					case *net.IPNet:
+						if !v.IP.IsLoopback() {
+							if p4 := v.IP.To4(); len(p4) == net.IPv4len {
+								host = v.IP.String()
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	keys := ed25519.RandomKeyPair()
 
 	glog.Infof("Private Key: %s", keys.PrivateKeyHex())
@@ -62,7 +91,7 @@ func main() {
 		nat.RegisterPlugin(builder)
 	}
 
-	// Add custom chat plugin.
+	// Add custom clipboard plugin.
 	builder.AddPlugin(new(ClipboardPlugin))
 
 	net, err := builder.Build()
