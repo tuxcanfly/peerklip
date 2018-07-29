@@ -9,8 +9,8 @@ Install:
 
 Start:
 
-    peerklip -host 0.0.0.0 -port 3000
+    peerklip
 
 Connect:
 
-    peerklip -host 0.0.0.0 -port 3000 -peers tcp://1.1.1.1:3000
+    peerklip -peers <peer>
