@@ -1,16 +1,11 @@
 package: github.com/tuxcanfly/peerklip
 import:
-- package: github.com/gogo/protobuf
-  version: ^1.1.1
+- package: github.com/btcsuite/btcd
   subpackages:
-  - gogoproto
-  - proto
+  - btcec
 - package: github.com/golang/glog
-- package: github.com/shivylp/clipboard
-- package: github.com/perlin-network/noise
-  version: master
+- package: github.com/lightningnetwork/lnd
   subpackages:
-  - crypto/ed25519
-  - network
-  - network/discovery
-  - network/nat
+  - brontide
+  - lnwire
+- package: github.com/tuxcanfly/clipboard
