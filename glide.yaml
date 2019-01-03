@@ -8,4 +8,5 @@ import:
   subpackages:
   - brontide
   - lnwire
-- package: github.com/tuxcanfly/clipboard
+- package: github.com/spy16/clipboard
+
